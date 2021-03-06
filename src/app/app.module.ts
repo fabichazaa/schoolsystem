@@ -9,17 +9,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MenuComponent } from './components/menu/menu.component';
 import { SubjectsComponent } from './components/subjects/subjects.component';
+import { SubjectComponent } from './components/subject/subject.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    SubjectsComponent
+    SubjectsComponent,
+    SubjectComponent,
+    NotfoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +35,10 @@ import { SubjectsComponent } from './components/subjects/subjects.component';
     BrowserAnimationsModule,
     MatSliderModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule,
+    MatButtonModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

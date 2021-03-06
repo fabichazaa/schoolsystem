@@ -1,15 +1,26 @@
 img {
-    float: left;
-    width: 280px;
     height: 130px;
     object-fit: cover;
     object-position: center;
 }
 
-.mat-card-header{
-    margin-bottom: 8px;
+.content {
+    padding: 16px;
 }
 
-.mat-grid-tile{
-    padding-bottom:0px;
+.content > mat-card {
+    width: 200px;
+}
+
+.content{
+    background-color: #ade8f4;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    
 }

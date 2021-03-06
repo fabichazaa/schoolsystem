@@ -1,19 +1,15 @@
-<p>subjects works!</p>
-<mat-grid-list cols="4" rowHeight="250px" [style.background]="'#a8dadc'">
-    <div *ngFor="let subject of subjects">
-        <mat-grid-tile>
-            <mat-card class="example-card" style="padding-bottom: 0px;">
-                <mat-card-header style="padding-bottom: 0px;">
-                  <div mat-card-avatar style="background-image: url('assets/images/professor_custom.jpg');
-                  background-size: cover;"></div>
-                  <mat-card-title>{{subject.name}}</mat-card-title>
-                  <mat-card-subtitle>{{subject.teacher}}</mat-card-subtitle>
-                </mat-card-header>
-                <div class="item">
-                    <img width="400" height="400" mat-card-image src="{{subject.picture}}" alt="{{subject.name}}">
-                </div>
-              </mat-card>  
-        </mat-grid-tile>
-        
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let subject of subjects">
+        <mat-card class="mat-elevation-z4" style="padding-bottom: 5px;" >
+            <mat-card-header style="padding-bottom: 0px;">
+                <div mat-card-avatar style="background-image: url('{{subject.teacher.picture}}');
+                background-size: cover;"></div>
+                <mat-card-title ><a [routerLink]="['/subject/', subject.id]">{{subject.name}}</a></mat-card-title>
+                <mat-card-subtitle>{{subject.teacher.name}}</mat-card-subtitle>
+              </mat-card-header>
+          <img mat-card-image src="{{subject.picture}}">
+        </mat-card>
+      </div>
     </div>
-</mat-grid-list>
+</div> 
