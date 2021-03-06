@@ -1,0 +1,15 @@
+img {
+    float: left;
+    width: 280px;
+    height: 130px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.mat-card-header{
+    margin-bottom: 8px;
+}
+
+.mat-grid-tile{
+    padding-bottom:0px;
+}

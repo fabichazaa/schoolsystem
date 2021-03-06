@@ -1,0 +1,19 @@
+<p>subjects works!</p>
+<mat-grid-list cols="4" rowHeight="250px" [style.background]="'#a8dadc'">
+    <div *ngFor="let subject of subjects">
+        <mat-grid-tile>
+            <mat-card class="example-card" style="padding-bottom: 0px;">
+                <mat-card-header style="padding-bottom: 0px;">
+                  <div mat-card-avatar style="background-image: url('assets/images/professor_custom.jpg');
+                  background-size: cover;"></div>
+                  <mat-card-title>{{subject.name}}</mat-card-title>
+                  <mat-card-subtitle>{{subject.teacher}}</mat-card-subtitle>
+                </mat-card-header>
+                <div class="item">
+                    <img width="400" height="400" mat-card-image src="{{subject.picture}}" alt="{{subject.name}}">
+                </div>
+              </mat-card>  
+        </mat-grid-tile>
+        
+    </div>
+</mat-grid-list>
