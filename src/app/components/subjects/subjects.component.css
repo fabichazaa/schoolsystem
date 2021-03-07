@@ -4,6 +4,14 @@ img {
     object-position: center;
 }
 
+img:hover{
+    opacity: 0.8;
+}
+
+img:active{
+    opacity: 0.6;
+}
+
 .content {
     padding: 16px;
 }
@@ -22,5 +30,5 @@ a{
 }
 
 a:hover{
-    
+    color: #0096C7;
 }
