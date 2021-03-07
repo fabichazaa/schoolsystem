@@ -9,3 +9,11 @@
     margin-top:10px; 
     margin-right:10px;
 }
+
+.resources-item{
+    font-size: 0.9rem;
+}
+
+/* Changes tab color */
+::ng-deep .mat-ink-bar {
+    background-color: #e63946 !important;}

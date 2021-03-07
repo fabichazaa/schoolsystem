@@ -14,6 +14,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 
 import { MenuComponent } from './components/menu/menu.component';
@@ -43,7 +46,9 @@ import { HomeComponent } from './components/home/home.component';
     MatButtonModule,
     FlexLayoutModule,
     MatTabsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatIconModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

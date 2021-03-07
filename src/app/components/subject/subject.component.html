@@ -12,71 +12,68 @@
   </mat-grid-tile>
 </mat-grid-list>
 
-<mat-card class="card-demo">
-  <mat-card-content class="large">
-    <div fxLayout="column" fxFill>
-      <div fxLayout fxFlex>
-        <div class="one" fxFlex="80" fxLayoutAlign="left">  
-          <mat-tab-group animationDuration="0ms">
-            <mat-tab label="Resources">
-              <br>
-              <mat-accordion>
-                <mat-expansion-panel>
-                  <mat-expansion-panel-header>
-                    <h4><i class="fas fa-xs fa-info-circle"></i>Unit 1: Productive processes, regional economies and territorial asymmetries in Argentina </h4>
-                  </mat-expansion-panel-header>
-                  <ng-template matExpansionPanelContent>
-                    <app-howto-get-started></app-howto-get-started>
-                  </ng-template>
-                </mat-expansion-panel>
-              
-                <mat-expansion-panel>
-                  <mat-expansion-panel-header>
-                    <h4><i class="fas fa-xs fa-info-circle"></i>Unit 2: The problem of the common goods of the earth and its relation to environmental problems</h4>
-                  </mat-expansion-panel-header>
-                  <ng-template matExpansionPanelContent>
-                    <app-howto-save></app-howto-save>
-                  </ng-template>
-                </mat-expansion-panel>
-              
-                <mat-expansion-panel>
-                  <mat-expansion-panel-header>
-                    <h4><i class="fas fa-xs fa-info-circle"></i>Unit 3: Population and living conditions in contemporary Argentina</h4>
-                  </mat-expansion-panel-header>
-                  <ng-template matExpansionPanelContent>
-                    <app-howto-search></app-howto-search>
-                  </ng-template>
-                </mat-expansion-panel>
-              
-                <mat-expansion-panel>
-                  <mat-expansion-panel-header>
-                    <h4><i class="fas fa-xs fa-info-circle"></i>Unit 4: The Argentine urban system and the conditions and experiences of life in the city
-                      current</h4>
-                  </mat-expansion-panel-header>
-                  <ng-template matExpansionPanelContent>
-                    <app-howto-bookmarklets></app-howto-bookmarklets>
-                  </ng-template>
-                </mat-expansion-panel>
-              
-  
-              </mat-accordion>
-            </mat-tab>
-            
+<mat-tab-group animationDuration="0ms" >
+  <mat-tab label="Resources">
+    <br>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <h4><i class="fas fa-xs fa-info-circle"></i>Unit 1: Productive processes, regional economies and territorial asymmetries in Argentina </h4>
+        </mat-expansion-panel-header>
+        <ng-template matExpansionPanelContent>
+          <!--TODO: MAKE RESOURCES DATABASE OR SMTHG LIKE THAT-->
+          <div class="resources-item"><a href="\assets\pdfs\geography\unit_1\economias_regionales.pdf" target="_blank"><mat-icon aria-hidden="false" aria-label="pdf-icon">picture_as_pdf</mat-icon>Read more</a></div>
+          <div class="resources-item"><a href="\assets\pdfs\geography\unit_1\economias_regionales.webp" target="_blank"><mat-icon style="padding-bottom:0px;" aria-hidden="false" aria-label="photo-icon">insert_photo</mat-icon>Read more</a></div>
+        </ng-template>
+      </mat-expansion-panel>
+    
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <h4><i class="fas fa-xs fa-info-circle"></i>Unit 2: The problem of the common goods of the earth and its relation to environmental problems</h4>
+        </mat-expansion-panel-header>
+        <ng-template matExpansionPanelContent>
+          <app-howto-save></app-howto-save>
+        </ng-template>
+      </mat-expansion-panel>
+    
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <h4><i class="fas fa-xs fa-info-circle"></i>Unit 3: Population and living conditions in contemporary Argentina</h4>
+        </mat-expansion-panel-header>
+        <ng-template matExpansionPanelContent>
+          <app-howto-search></app-howto-search>
+        </ng-template>
+      </mat-expansion-panel>
+    
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <h4><i class="fas fa-xs fa-info-circle"></i>Unit 4: The Argentine urban system and the conditions and experiences of life in the city
+            current</h4>
+        </mat-expansion-panel-header>
+        <ng-template matExpansionPanelContent>
+          <app-howto-bookmarklets></app-howto-bookmarklets>
+        </ng-template>
+      </mat-expansion-panel>  
+    </mat-accordion>
+  </mat-tab>                 
+  <mat-tab label="Exams">Exams</mat-tab>
+  <mat-tab label="Students">Students</mat-tab>
+</mat-tab-group>
 
-
-
-
-            
-            <mat-tab label="Exams">Exams</mat-tab>
-            <mat-tab label="Students">Students</mat-tab>
-          </mat-tab-group>
-        </div>
-        <div class="two" fxFlex="20" fxLayoutAlign="center center">Professor and maybe calendar?</div>
-      </div>
-    </div>
-  </mat-card-content>
-  <mat-card-footer class="bottomPad">
-    <div class="hint"></div>
-  </mat-card-footer>
-</mat-card>
-
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>dialpad</mat-icon>
+    <span>Redial</span>
+  </button>
+  <button mat-menu-item disabled>
+    <mat-icon>voicemail</mat-icon>
+    <span>Check voice mail</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>notifications_off</mat-icon>
+    <span>Disable alerts</span>
+  </button>
+</mat-menu>
