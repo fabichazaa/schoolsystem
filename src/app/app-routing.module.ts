@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'subjects',
     component: SubjectsComponent
+  },
+  {
+    path: '**',
+    component: NotfoundComponent
   }
   ];
 
