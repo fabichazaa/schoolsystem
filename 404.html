@@ -11,16 +11,21 @@
   <style type="text/css">@font-face{font-family:'Material Icons';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/materialicons/v80/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');}.material-icons{font-family:'Material Icons';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased;}</style>
 <link rel="stylesheet" href="styles.7b24d4c0c7d7e30102d9.css"></head>
 <script>
-  // See http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/
   (function(){
     var redirect = sessionStorage.redirect;
     delete sessionStorage.redirect;
     if (redirect && redirect != location.href) {
       history.replaceState(null, null, redirect);
+      // REMOVE THIS - just showing the redirect route in the UI
+      document.body.setAttribute('message', 'This page was redirected by 404.html, from the route: ' + redirect);
+    }
+    else {
+      // REMOVE THIS - just showing the redirect route in the UI
+      document.body.setAttribute('message', 'This page was loaded directly from the index.html file');
     }
   })();
 </script>
 <body class="mat-typography">
   <app-root></app-root>
-<script src="runtime.7b63b9fd40098a2e8207.js" defer=""></script><script src="polyfills.94daefd414b8355106ab.js" defer=""></script><script src="main.8faf25f1c05d97d55f03.js" defer=""></script></body>
+<script src="runtime.7b63b9fd40098a2e8207.js" defer=""></script><script src="polyfills.94daefd414b8355106ab.js" defer=""></script><script src="main.d773e534d56892410683.js" defer=""></script></body>
 </html>
